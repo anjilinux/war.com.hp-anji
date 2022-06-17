@@ -27,6 +27,20 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    
+    
+    <dependency>
+<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>3.2</version>
+</dependency>Followed by the profile<profiles>
+
+    
+    
+    
+    
+    
+    
   </dependencies>
 
 
