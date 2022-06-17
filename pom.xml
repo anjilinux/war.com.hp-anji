@@ -31,18 +31,16 @@
 
 
 
-
-  <distributionManagement>
+<distributionManagement>
     <snapshotRepository>
-       <id>nexusRepo</id>
-       <url>http://localhost:8081/repository/sample-snapshots/</url>
+      <id>nexusRepo</id>
+      <url>http://your-host:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
-   
-   <repository>
-       <id>nexusRepo</id>
-       <url>http://localhost:8081/repository/sample-releases/</url>
-   </repository>
-   </distributionManagement>
+    <repository>
+      <id>nexusRepo</id>
+      <url>http://your-host:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
 
 
 
