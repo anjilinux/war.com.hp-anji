@@ -57,7 +57,28 @@
   </distributionManagement>
 
 
-
+ 
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+ http://localhost:9000
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
+    
+    
+    
+    
+    
+    
+    
+    
 
   <build>
     <finalName>sonar.hp.war</finalName>
