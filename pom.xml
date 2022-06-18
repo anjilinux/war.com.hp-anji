@@ -1,3 +1,6 @@
+
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -21,43 +24,50 @@
   </properties>
 
   <dependencies>
-    <dependency>
+
+
+<dependency>
+<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>3.2</version>
+</dependency>
+
+
+
+<dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
     
-    
-    <dependency>
-<groupId>org.sonarsource.scanner.maven</groupId>
-<artifactId>sonar-maven-plugin</artifactId>
-<version>3.2</version>
-</dependency>Followed by the profile<profiles>
 
-    
-    
-    
-    
-    
-    
+
+
   </dependencies>
+
+
+
+
 
 
 
 <distributionManagement>
     <snapshotRepository>
       <id>nexusRepo</id>
-      <url>http://your-host:8081/repository/maven-snapshots/</url>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>nexusRepo</id>
-      <url>http://your-host:8081/repository/maven-releases/</url>
+      <url>http://localhost:8081/repository/maven-releases/</url>
     </repository>
+  
   </distributionManagement>
 
 
- 
+<profiles>
+
+
 <profile>
 <id>sonar</id>
 <activation>
@@ -71,14 +81,17 @@
 </properties>
 </profile>
 </profiles>
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
 
   <build>
     <finalName>sonar.hp.war</finalName>
@@ -97,6 +110,22 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
         </plugin>
+
+
+
+
+
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.7.0.1746</version>
+      </plugin>
+
+
+
+
+
+
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
@@ -117,3 +146,9 @@
     </pluginManagement>
   </build>
 </project>
+
+
+
+
+
+
